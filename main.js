@@ -40,8 +40,8 @@ class lapiz{
     obj = new lapiz({});
     color.value = obj.color;
     dimension.value = obj.dimension;
-    document.getElementById("Mongo").innerHTML = obj.material;
-    document.getElementById("True").innerHTML = obj.material;
+    document.getElementById("Mongo").innerHTML = obj.marca;
+    document.getElementById("True").innerHTML = obj.borrador;
     document.getElementById("Madera").innerHTML = obj.material;
  })
  
@@ -71,6 +71,4 @@ form.addEventListener("submit", (e) => {
         <td>${pencil.getMaterial()}</td>
         `;
     table.appendChild(newRow);
-    console.log(pencil);
-
 })
