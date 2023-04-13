@@ -1,11 +1,10 @@
 body{
-    background: #0f0c29;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #0f0c29; 
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
     background-attachment: fixed;
     background-size: cover;
 }
-
 form{
     position: relative;
     text-align: center;
@@ -16,15 +15,17 @@ form{
     
 }
 table{
-    width: 50%;
-    position: relative;
     text-align: center;
     background: #ffffff6e;
-    padding: 40px 0;
     box-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
     border-radius: 10px;
+}
+.color{
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
+}
+.button{
+    background: none;
+    border-radius: 10px;
+    border: 2px solid;
 
-    margin-block-start: 0.5%;;
-    margin-block-end: 80px;
-    width: 65%;
 }

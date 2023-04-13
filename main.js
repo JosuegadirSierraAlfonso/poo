@@ -64,7 +64,7 @@ form.addEventListener("submit", (e) => {
 
     const newRow = document.createElement("tr");
     newRow.innerHTML = `
-        <td style= "background-color: ${pencil.getColor()}">${pencil.getColor()}</td>
+        <td class="py-3" style= "border-radius: 10px; background-color: ${pencil.getColor()}">${pencil.getColor()}</td>
         <td>${pencil.getDimension()}</td>
         <td>${pencil.getMarca()}</td>
         <td>${pencil.getBorrador()}</td>
