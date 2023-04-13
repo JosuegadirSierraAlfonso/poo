@@ -19,7 +19,7 @@ class lapiz{
         return this.dimension;
     }
     getMarca(){
-        return this.marca;
+        return this.#marca;
     }
     getBorrador(){
         return this.borrador;
@@ -43,4 +43,34 @@ class lapiz{
     document.getElementById("Mongo").innerHTML = obj.material;
     document.getElementById("True").innerHTML = obj.material;
     document.getElementById("Madera").innerHTML = obj.material;
- }) 
+ })
+ 
+ /* Show Table*/
+const form = document.querySelector("#form")
+ const table = document.querySelector("#table tbody")
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    const colorData = formData.get("color");
+    const dimensionData = formData.get("dimension");
+    const marcaData = formData.get("marca");
+    const borradorData = formData.get("borrador");
+    const materialData = formData.get("material");
+
+    const pencil = new lapiz({color: colorData, dimension: dimensionData, marca: marcaData, borrador:borradorData, material:materialData})
+
+    const newRow = document.createElement("tr");
+    newRow.innerHTML = `
+        <td style= "background-color: ${pencil.getColor()}">${pencil.getColor()}</td>
+        <td>${pencil.getDimension()}</td>
+        <td>${pencil.getMarca()}</td>
+        <td>${pencil.getBorrador()}</td>
+        <td>${pencil.getMaterial()}</td>
+        `;
+    table.appendChild(newRow);
+    console.log(pencil);
+
+})
